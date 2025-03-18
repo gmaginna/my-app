@@ -1,4 +1,9 @@
 [build]
-  command = "bun install && bun run build"
+  command = "bun install --force && bun run build"
   publish = ".next"
   functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "22.14.0"
+  BUN_VERSION = "latest"
+  NPM_FLAGS = "--ignore-scripts"
